@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name ="title" content="Lemon restaurant"/>
-    <meta name ="description" content="A family owned resturant focused on traditional recipes with modern twist"/>
-    <meta name = "keywords" content="restaurant traditional"/>
-    <meta name = "author" content = "Kushal Bhetuwal"/>
+    <meta name="title" content="Lemon restaurant" />
+    <meta
+      name="description"
+      content="A family owned resturant focused on traditional recipes with modern twist"
+    />
+    <meta name="keywords" content="restaurant traditional" />
+    <meta name="author" content="Kushal Bhetuwal" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="our Menu"/>
+    <meta property="og:title" content="our Menu" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/lemon.png"/>
-    <meta property="og:url" content="http://littlelemon.com.au"/>
-    <meta property="og:description" content="Little lemon is a family owned restaurant focused on traditional recipes with modern twist:"/>
+    <meta property="og:image" content="images/lemon.png" />
+    <meta property="og:url" content="http://littlelemon.com.au" />
+    <meta
+      property="og:description"
+      content="Little lemon is a family owned restaurant focused on traditional recipes with modern twist:"
+    />
     <meta property="og:locale" content="en-us" />
-    <meta property ="og:site_name" content="Little_Lemon"/>
+    <meta property="og:site_name" content="Little_Lemon" />
     <title>Litttle_Lemon_Restaurant</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
   </head>
   <body>
@@ -31,6 +37,81 @@
       </ul>
     </nav>
     <main>
+      <form method="post">
+        <div>
+          <label for="firstname">FirstName: </label><br />
+          <input
+            type="text"
+            id="firstname"
+            required
+            minlength="3"
+            maxlength="20"
+          />
+        </div>
+
+        <div>
+          <label for="lastname">LastName: </label><br />
+          <input
+            type="text"
+            id="lastname"
+            required
+            minlength="3"
+            maxlength="20"
+          />
+        </div>
+
+        <div>
+          <label for="email">Email: </label><br />
+          <input type="email" id="email" required />
+        </div>
+
+        <div>
+          <label for="password">Password: </label><br />
+          <input
+            type="password"
+            id="password"
+            required
+            minlength="8"
+            maxlength="25"
+          />
+        </div>
+
+        <div>
+          <label for="confirm_password">Confirm Password: </label><br />
+          <input
+            type="password"
+            id="confirm_password"
+            required
+            minlength="8"
+            maxlength="25"
+          />
+        </div>
+        <br />
+        <div>
+          <button type="submit">Sign up</button>
+        </div>
+      </form>
+      <br>
+     <form method="post">
+      <div>
+        <label for="booking_date">Booking Date</label>
+        <input type="date" id="booking_date" name="booking-date">
+      </div>
+      <div>
+        <label for="booking_people">Number of People</label>
+        <input type="range" id="booking_people" name="booking_people" oninput="this.nextElementSibling.value = this.value" min="1" max="10">
+       <output>4</output>
+      </div>
+      <div>
+        <label for="booking_location">Location</label>
+        <input id="booking_location" name="booking_location" list="location">
+        <datalist id="location">
+          <option value="Uptown">Uptown</option>
+          <option value="Downtown">Downtown</option>
+        </datalist>
+      </div>
+      <button type="submit">Book a table</button>
+     </form>
       <h1>Blog</h1>
       <article>
         <h2>20% off this weekend</h2>
@@ -44,5 +125,20 @@
     <footer>
       <p>Copyright Little Lemon</p>
     </footer>
+    <fieldset> 
+      <legend>Personal Info</legend> 
+      <label for="fname">First name:</label><br> 
+      <input type="text" id="fname" name="fname" value="John"><br> 
+      <label for="lname">Last name:</label><br> 
+      <input type="text" id="lname" name="lname" value="Doe"><br> 
+    </fieldset> 
+    
+    <fieldset> 
+      <legend>Qualificaiton</legend> 
+      <label for="pdegree">Primary degree:</label><br> 
+      <input type="text" id="pdegree" name="degree" value="Masters"><br> 
+      <label for="fos">Last name:</label><br> 
+      <input type="text" id="fos" name="field" value="Psychology"><br> 
+    </fieldset> 
   </body>
 </html>
